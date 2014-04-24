@@ -18,4 +18,11 @@ NEAR stands for Node, Express, AngularJS, and RethinkDB. Of course, there are pl
 ### Suggested
 - **Task Runner: [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)**. There's no question as to whether or not we need a task runner. The question here is whether we want Gulp or Grunt. While Grunt is by far the more mature of the two, and therefore has more plugins, Gulp does have its advantages. See [The Build Wars presentation](http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt) for a comparison of the two.
 - **Client-side Package Manager: [Bower](http://bower.io/)**.
-- **Test Runner: [Karma](http://karma-runner.github.io/0.12/index.html)**.
+- **Test Runner: [Karma](http://karma-runner.github.io/0.12/index.html)**. If we end up using this, we should look into [Jasmine](http://jasmine.github.io/) as well.
+- **Administration & Authentication: [Passport](http://passportjs.org/)**.
+- **Utilities: [Lo-Dash](http://lodash.com/)**.
+- **Server-Side Testing: [Mocha](http://visionmedia.github.io/mocha/)**.
+
+### Other Considerations
+- **[Consolidate](https://github.com/visionmedia/consolidate.js/)**.
+- **[Bootstrap](http://getbootstrap.com/)**.
