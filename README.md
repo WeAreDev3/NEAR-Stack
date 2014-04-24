@@ -15,6 +15,7 @@ NEAR stands for Node, Express, AngularJS, and RethinkDB. Of course, there are pl
 - **Application Framework: [Express](http://expressjs.com/)**. No other options are mature enough to be useful yet.
 - **MVW (Model-View-Whatever) Framework: [AngularJS](https://angularjs.org/)**. While Express handles the framework on the server-side, AngularJS takes care of everything on the client-side.
 - **Database: [RethinkDB](http://rethinkdb.com/)**. RethinkDB seems to be superior in many ways to MongoDB, and while it's not quite a standard in the node.js world, it may well be one day.
+- **Dynamic Database: [Firebase](https://www.firebase.com/)**. Firebase will be very useful when data needs to be stored for quick periods of time and needs to be sent from the client.
 
 ### Suggested
 - **Task Runner: [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)**. There's no question as to whether or not we need a task runner. The question here is whether we want Gulp or Grunt. While Grunt is by far the more mature of the two, and therefore has more plugins, Gulp does have its advantages. See [The Build Wars](http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt) for a comparison of the two.
