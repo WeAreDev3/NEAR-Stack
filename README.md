@@ -10,17 +10,16 @@ NEAR stands for Node, Express, AngularJS, and RethinkDB. Of course, there are pl
 - Adaptability - easily be able to adapt the stack for any application involving node.js, from a simple html static server to a complex websocket server/client combo.
 
 ## Packages
-### Confirmed
 - **Server Platform: [Node.js](http://nodejs.org/)**. I think we've pretty much decided on this one from the start.
 - **Application Framework: [Express](http://expressjs.com/)**. No other options are mature enough to be useful yet.
 - **MVW (Model-View-Whatever) Framework: [AngularJS](https://angularjs.org/)**. While Express handles the framework on the server-side, AngularJS takes care of everything on the client-side.
 - **Database: [RethinkDB](http://rethinkdb.com/)**. RethinkDB seems to be superior in many ways to MongoDB, and while it's not quite a standard in the node.js world, it may well be one day.
 - **Task Runner: [Gulp](http://gulpjs.com/)**. Gulp will automate all tasks during production and development.
 - **Client-side Package Manager: [Bower](http://bower.io/)**. Bower is like a client-side npm, in many ways.
-- **Test Runner: [Karma](http://karma-runner.github.io/0.12/index.html)**. We will use [Jasmine](http://jasmine.github.io/) as well.
+- **Test Runner: [Karma](http://karma-runner.github.io/0.12/index.html)**. We will use [Jasmine](http://jasmine.github.io/) in conjunction with Karma.
 - **Administration & Authentication: [Passport](http://passportjs.org/)**.
 - **Utilities: [Lo-Dash](http://lodash.com/)**.
-- **Server-Side Testing: [Mocha](http://visionmedia.github.io/mocha/)**.
+- **Templating Engine: [Swig](http://paularmstrong.github.io/swig/)**.
 
 ### Suggested
 - **Module Loader: [RequireJS](http://requirejs.org/) or [Browserify](http://browserify.org/)**. Kind of a similar thing to Grunt and Gulp, in that RequireJS is the more mature of the two, but Browserify is a new take on the idea. Browserify uses the node.js `require()` function to include modules, which is definitely an interesting take.
@@ -28,3 +27,28 @@ NEAR stands for Node, Express, AngularJS, and RethinkDB. Of course, there are pl
 ### Other Considerations
 - **[Consolidate](https://github.com/visionmedia/consolidate.js/)**.
 - **[Bootstrap](http://getbootstrap.com/)**.
+
+## To Do
+- [x] Create a README
+- [x] Decide on a list of packages
+
+### The basic, functioning server
+- [x] Create a .gitignore
+- [x] Create an npm package.json
+- [x] Create a basic, working server with express
+- [x] Create a config file
+- [ ] Install Lo-Dash
+
+### Rendering webpages
+- [ ] Make an index.html page load using Swig
+- [ ] Modify the settings for Swig for compatibility with AngularJS
+- [ ] Get 404 and 500 error pages to load
+- [ ] Create header, footer, and layout html templates and wire them in
+
+### Client-side magic
+- [ ] Install Bower
+- [ ] Install AngularJS
+- [ ] Wire AngularJS into the layout html template
+
+### Databasing
+- [ ] Plan out our RethinkDB node.js layout
