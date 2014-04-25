@@ -28,5 +28,6 @@
 
 	"dependencies": {
 		"express": "4.1.x"
+		"lodash": "2.4.x", 
 	}
 }
