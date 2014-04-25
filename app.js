@@ -3,11 +3,11 @@ var app = require('express')(),
     swig = require('swig'),
     config = require('./config');
 
-// Assign swig.renderFile to all .swig files
-app.engine('swig', swig.renderFile);
+// Assign swig.renderFile to all .html files
+app.engine('html', swig.renderFile);
 
-// Set the default webpage file extension to .swig
-app.set('view engine', 'swig');
+// Set the default webpage file extension to .html
+app.set('view engine', 'html');
 app.set('views', config.root + '/server/views');
 
 // Run our router module to prepare for incoming requests

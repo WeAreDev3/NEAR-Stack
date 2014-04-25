@@ -1,5 +1,5 @@
 // Fix compatibility issues between Swig and AngularJS
-require('swig').swig.setDefaults({
+require('swig').setDefaults({
 	'varControls': ['{=', '=}']
 })
 
