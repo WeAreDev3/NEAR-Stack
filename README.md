@@ -16,14 +16,14 @@ NEAR stands for Node, Express, AngularJS, and RethinkDB. Of course, there are pl
 - **MVW (Model-View-Whatever) Framework: [AngularJS](https://angularjs.org/)**. While Express handles the framework on the server-side, AngularJS takes care of everything on the client-side.
 - **Database: [RethinkDB](http://rethinkdb.com/)**. RethinkDB seems to be superior in many ways to MongoDB, and while it's not quite a standard in the node.js world, it may well be one day.
 - **Task Runner: [Gulp](http://gulpjs.com/)**. Gulp will automate all tasks during production and development.
-
-### Suggested
-- **Module Loader: [RequireJS](http://requirejs.org/) or [Browserify](http://browserify.org/)**. Kind of a similar thing to Grunt and Gulp, in that RequireJS is the more mature of the two, but Browserify is a new take on the idea. Browserify uses the node.js `require()` function to include modules, which is definitely an interesting take.
-- **Client-side Package Manager: [Bower](http://bower.io/)**.
-- **Test Runner: [Karma](http://karma-runner.github.io/0.12/index.html)**. If we end up using this, we should look into [Jasmine](http://jasmine.github.io/) as well.
+- **Client-side Package Manager: [Bower](http://bower.io/)**. Bower is like a client-side npm, in many ways.
+- **Test Runner: [Karma](http://karma-runner.github.io/0.12/index.html)**. We will use [Jasmine](http://jasmine.github.io/) as well.
 - **Administration & Authentication: [Passport](http://passportjs.org/)**.
 - **Utilities: [Lo-Dash](http://lodash.com/)**.
 - **Server-Side Testing: [Mocha](http://visionmedia.github.io/mocha/)**.
+
+### Suggested
+- **Module Loader: [RequireJS](http://requirejs.org/) or [Browserify](http://browserify.org/)**. Kind of a similar thing to Grunt and Gulp, in that RequireJS is the more mature of the two, but Browserify is a new take on the idea. Browserify uses the node.js `require()` function to include modules, which is definitely an interesting take.
 
 ### Other Considerations
 - **[Consolidate](https://github.com/visionmedia/consolidate.js/)**.

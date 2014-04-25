@@ -1,0 +1,32 @@
+{
+	"name": "NEAR-Stack",
+	"version": "0.0.0",
+	"author": "Dev3",
+	"contributors": [
+		{
+			"name": "Tal Ben-Ari",
+			"email": "talbenari1@gmail.com"
+		},
+		{
+			"name": "Michael Edlinger",
+			"email": "mkeedlinger@gmail.com"
+		},
+		{
+			"name": "Jesse Smick",
+			"email": "janka102@gmail.com"
+		}
+	],
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/WeAreDev3/NEAR-Stack.git"
+	},
+
+	"scripts": {
+		"start": "node app.js"
+	},
+
+	"dependencies": {
+		"express": "4.1.x"
+	}
+}
