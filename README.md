@@ -15,9 +15,9 @@ NEAR stands for Node, Express, AngularJS, and RethinkDB. Of course, there are pl
 - **Application Framework: [Express](http://expressjs.com/)**. No other options are mature enough to be useful yet.
 - **MVW (Model-View-Whatever) Framework: [AngularJS](https://angularjs.org/)**. While Express handles the framework on the server-side, AngularJS takes care of everything on the client-side.
 - **Database: [RethinkDB](http://rethinkdb.com/)**. RethinkDB seems to be superior in many ways to MongoDB, and while it's not quite a standard in the node.js world, it may well be one day.
+- **Task Runner: [Gulp](http://gulpjs.com/)**. Gulp will automate all tasks during production and development.
 
 ### Suggested
-- **Task Runner: [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)**. There's no question as to whether or not we need a task runner. The question here is whether we want Gulp or Grunt. While Grunt is by far the more mature of the two, and therefore has more plugins, Gulp does have its advantages. See [The Build Wars](http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt) for a comparison of the two.
 - **Module Loader: [RequireJS](http://requirejs.org/) or [Browserify](http://browserify.org/)**. Kind of a similar thing to Grunt and Gulp, in that RequireJS is the more mature of the two, but Browserify is a new take on the idea. Browserify uses the node.js `require()` function to include modules, which is definitely an interesting take.
 - **Client-side Package Manager: [Bower](http://bower.io/)**.
 - **Test Runner: [Karma](http://karma-runner.github.io/0.12/index.html)**. If we end up using this, we should look into [Jasmine](http://jasmine.github.io/) as well.
