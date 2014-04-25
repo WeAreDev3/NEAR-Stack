@@ -2,7 +2,7 @@ module.exports = function(app) {
     app.get('/', function (req, res) {
         res.render('index', { title: 'NEAR Stack' });
     });
-    app.routes('*').all(function (req, res) {
-    	res.render('404', { title: 'NEAR Stack - 404'})
+    app.route('*').all(function (req, res) {
+        res.render('404', { title: 'NEAR Stack - 404'})
     })
 };
