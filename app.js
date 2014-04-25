@@ -13,3 +13,4 @@ app.set('views', config.root + '/server/views');
 require(config.root + '/server/routes')(app);
 
 app.listen(config.port);
+console.log('Server running on port', config.port)
