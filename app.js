@@ -8,10 +8,8 @@ app.engine('swig', swig.renderFile);
 
 // Set default extension to .swig
 app.set('view engine', 'swig');
-app.set('views', __dirname + '/server/views');
+app.set('views', config.root + '/server/views');
 
-app.get('/', function (req, res) {
-    res.render('index', { title: 'NEAR Stack' });
-});
+require(config.root + '/server/routes')(app);
 
 app.listen(config.port);
