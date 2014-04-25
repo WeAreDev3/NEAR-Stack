@@ -1,2 +1,3 @@
+# Node.js dependencies & logs
 node_modules/*
 *.log
