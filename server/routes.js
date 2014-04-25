@@ -3,6 +3,6 @@ module.exports = function(app) {
         res.render('index', { title: 'NEAR Stack' });
     });
     app.route('*').all(function (req, res) {
-        res.render('404', { title: 'NEAR Stack - 404'})
-    })
+        res.render('404', { title: 'NEAR Stack - 404'});
+    });
 };
