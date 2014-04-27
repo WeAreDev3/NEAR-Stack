@@ -1,3 +1,6 @@
 # Node.js dependencies & logs
-node_modules/*
+node_modules/
 *.log
+
+# Bower install location
+public/lib
