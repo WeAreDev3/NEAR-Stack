@@ -1,7 +1,9 @@
+var config = require('./config');
+
 module.exports = function(app) {
     // The homepage
-    app.get('/', function (req, res) {
-        res.render('index', { title: 'NEAR Stack' });
+    app.route('/').get(function (req, res) {
+        res.render('index', { title: config.appName });
     });
     
     // A catch-all (i.e. 404)

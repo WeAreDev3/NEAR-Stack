@@ -6,5 +6,6 @@ require('swig').setDefaults({
 // Define all of the configurations that we want
 module.exports = {
 	port: process.env.PORT || 3000,
-	root: __dirname
+	root: __dirname,
+	appName: 'NEAR Stack'
 }
