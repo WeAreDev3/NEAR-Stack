@@ -10,6 +10,10 @@ app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', config.root + '/server/views');
 
+// Define public folders for our web app
+app.set('css', config.root + '/public/css');
+app.set('js', config.root + '/public/js');
+
 // Run our router module to prepare for incoming requests
 require(config.root + '/server/routes')(app);
 

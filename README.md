@@ -24,6 +24,7 @@ NEAR stands for Node, Express, AngularJS, and RethinkDB. Of course, there are pl
 
 ### Suggested
 - **Module Loader: [RequireJS](http://requirejs.org/) or [Browserify](http://browserify.org/)**. Kind of a similar thing to Grunt and Gulp, in that RequireJS is the more mature of the two, but Browserify is a new take on the idea. Browserify uses the node.js `require()` function to include modules, which is definitely an interesting take.
+- **Monkey Testing Application: [Gremlins.js](https://github.com/marmelab/gremlins.js)**. Very useful for quality assurance.
 
 ### Other Considerations
 - **[Consolidate](https://github.com/visionmedia/consolidate.js/)**.
