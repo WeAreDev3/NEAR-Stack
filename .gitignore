@@ -4,3 +4,9 @@ node_modules/
 
 # Bower install location
 public/bower_components
+
+# Mac junk
+.DS_Store
+
+# Shadow files
+~*
