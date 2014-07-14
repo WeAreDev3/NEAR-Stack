@@ -3,4 +3,4 @@ node_modules/
 *.log
 
 # Bower install location
-public/lib
+public/bower_components
