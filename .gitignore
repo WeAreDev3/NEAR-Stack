@@ -2,9 +2,13 @@
 node_modules/
 *.log
 
+# Bower
+bower_components/
+
 # Generated material
-!public/*.*
-public/*/
+public/bower/
+public/css/
+public/js/
 
 # Mac junk
 .DS_Store

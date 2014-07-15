@@ -36,9 +36,9 @@ app.set('view engine', 'html');
 app.set('views', path.join(config.root, 'server/views'));
 
 app.use(express.static(path.join(config.root, 'public')));
+app.use(express.static(path.join(config.root, 'public/bower')));
 app.use(express.static(path.join(config.root, 'public/css')));
 app.use(express.static(path.join(config.root, 'public/js')));
-app.use(express.static(path.join(config.root, 'public/bower_components')));
 
 // Path router
 require(path.join(config.root, 'server/routes'))(app);
