@@ -9,13 +9,14 @@ var express = require('express'),
 
     // Helpers
     path = require('path'),
-    config = require('./config');
+    config = require('./config'),
+    devMode = config.env === 'development';
 
 
 app.use(compression());
 
 swig.setDefaults({
-    cache: config.devMode ? false : 'memory',
+    cache: devMode ? false : 'memory',
     locals: {
         now: function() {
             return new Date();
@@ -24,7 +25,7 @@ swig.setDefaults({
     }
 });
 
-if (config.devMode) {
+if (devMode) {
     app.use(morgan('dev'));
 }
 
@@ -45,5 +46,5 @@ require(path.join(config.root, 'server/routes'))(app);
 
 // Open the ports for business
 app.listen(config.port, function() {
-    console.log('%s running on port %d (dev=%s)', config.appName, config.port, config.devMode);
+    console.log('%s running on port %d (dev=%s)', config.appName, config.port, devMode);
 });
