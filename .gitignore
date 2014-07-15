@@ -2,8 +2,9 @@
 node_modules/
 *.log
 
-# Bower install location
-public/bower_components
+# Generated material
+!public/*.*
+public/*/
 
 # Mac junk
 .DS_Store
