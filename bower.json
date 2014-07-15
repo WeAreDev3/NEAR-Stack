@@ -4,5 +4,13 @@
   "dependencies": {
     "angular": "~1.2.20",
     "normalize-css": "~3.0.1"
+  },
+  "overrides": {
+    "angular": {
+      "main": {
+        "development": "angular.js",
+        "production": "angular.min.js"
+      }
+    }
   }
 }
