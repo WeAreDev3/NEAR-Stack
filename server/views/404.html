@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>{= title =}</title>
-	</head>
-	<body>
-		Oh no! Page not found.
-	</body>
-</html>
+html>{% extends 'layouts/default.html' %}
+
+{% block content %}
+    <h1>Oh no! Page not found.</h1>
+{% endblock %}
