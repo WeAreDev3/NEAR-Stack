@@ -2,6 +2,7 @@
   "name": "NEAR-Stack",
   "version": "0.0.0",
   "author": "Dev3",
+  "private": true,
   "contributors": [
     {
       "name": "Tal Ben-Ari",
@@ -21,16 +22,28 @@
     "url": "https://github.com/WeAreDev3/NEAR-Stack.git"
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "postinstall": "bower install",
+    "start": "gulp",
+    "production": "NODE_ENV='production' gulp"
   },
   "dependencies": {
+    "body-parser": "^1.4.3",
     "bower": "^1.3.8",
+    "compression": "^1.0.8",
     "express": "^4.6.1",
-    "gulp": "^3.6.2",
+    "gulp": "^3.8.6",
+    "gulp-clean": "^0.3.1",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-notify": "^1.4.0",
+    "gulp-sass": "^0.7.2",
     "lodash": "^2.4.1",
+    "morgan": "^1.1.1",
     "swig": "^1.3.2"
   },
   "devDependencies": {
     "nodemon": "^1.2.1"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
