@@ -6,8 +6,8 @@ module.exports = function(app) {
         res.render('index', {
             title: 'Home',
             assets: {
-                js: ['angular/angular.min.js'],
-                css: ['normalize-css/normalize.css', 'main.css']
+                js: ['angular.js'],
+                css: ['normalize.css', 'main.css']
             }
         });
     });
@@ -17,8 +17,8 @@ module.exports = function(app) {
         res.render('404', {
             title: '404',
             assets: {
-                js: ['angular/angular.min.js'],
-                css: ['normalize-css/normalize.css', 'main.css']
+                js: ['angular.js'],
+                css: ['normalize.css', 'main.css']
             }
         });
     });
