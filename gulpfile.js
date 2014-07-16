@@ -1,13 +1,17 @@
+console.time('\033[32mGulp init time\033[0m');
 var config = require('./config'),
     devMode = config.env === 'development',
     path = require('path'),
 
     // Gulp and plugins
     gulp = require('gulp'),
+    gutil = require('gulp-util'),
+    rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     clean = require('gulp-clean'),
     nodemon = require('gulp-nodemon'),
     notify = require('gulp-notify'),
+    bower = require('bower'),
     mainBowerFiles = require('main-bower-files'),
 
     // File and folder locations
@@ -39,10 +43,21 @@ gulp.task('sass', function() {
 });
 
 gulp.task('bower', function() {
-    return gulp.src(mainBowerFiles({
-        env: config.env
-    }))
-        .pipe(gulp.dest(dirs.bower));
+    bower.commands.install().on('end', function(installed) {
+        var packages = Object.keys(installed).join(', ');
+
+        if (packages.length) {
+            gutil.log('Bower installed', gutil.colors.cyan(packages) + '.');
+        }
+
+        gulp.src(mainBowerFiles({
+                env: config.env
+            }))
+            .pipe(rename(function(pathName) {
+                pathName.basename = pathName.basename.replace(/\.min$/, '');
+            }))
+            .pipe(gulp.dest(dirs.bower));
+    });
 });
 
 gulp.task('watch', function() {
@@ -58,4 +73,6 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['clean', 'bower', 'sass']);
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build', 'watch'], function() {
+    console.timeEnd('\033[32mGulp init time\033[0m');
+});
