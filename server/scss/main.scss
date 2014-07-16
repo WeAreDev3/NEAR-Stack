@@ -1,3 +1,9 @@
+@import '_mixins';
+
+*, *:before, *:after {
+    @include box-sizing(border-box);
+}
+
 .container {
     width: 1000px;
     margin: 0 auto;
