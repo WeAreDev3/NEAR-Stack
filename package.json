@@ -22,7 +22,7 @@
     "url": "https://github.com/WeAreDev3/NEAR-Stack.git"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "bower install --config.interactive=false",
     "start": "gulp",
     "production": "NODE_ENV='production' gulp"
   },
