@@ -6,7 +6,7 @@ module.exports = function(app) {
         res.render('index', {
             title: 'Home',
             assets: {
-                js: ['angular.js'],
+                js: ['angular.js', 'angular-route.js'],
                 css: ['normalize.css', 'main.css']
             }
         });
@@ -17,7 +17,7 @@ module.exports = function(app) {
         res.render('404', {
             title: '404',
             assets: {
-                js: ['angular.js'],
+                js: ['angular.js', 'angular-route.js'],
                 css: ['normalize.css', 'main.css']
             }
         });
