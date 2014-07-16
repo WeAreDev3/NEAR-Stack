@@ -48,5 +48,5 @@ require(path.join(config.root, 'server/routes'))(app);
 
 // Open the ports for business
 app.listen(config.port, function() {
-    console.log('%s running on port %d (dev=%s)', config.appName, config.port, devMode);
+    console.log('%s running on port %d in %s mode', config.appName, config.port, config.env);
 });
