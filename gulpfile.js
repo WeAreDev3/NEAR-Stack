@@ -7,7 +7,10 @@ var config = require('./config'),
     gulp = require('gulp'),
     gutil = require('gulp-util'),
     rename = require('gulp-rename'),
+    gif = require('gulp-if-else'),
     sass = require('gulp-sass'),
+    jshint = require('gulp-jshint'),
+    uglify = require('gulp-uglifyjs'),
     clean = require('gulp-clean'),
     nodemon = require('gulp-nodemon'),
     notify = require('gulp-notify'),
@@ -17,7 +20,8 @@ var config = require('./config'),
     // File and folder locations
     files = {
         'bower': './bower.json',
-        'sass': './server/scss/*.scss'
+        'sass': './server/scss/*.scss',
+        'js': './server/js/*.js'
     },
     dirs = {
         'bower': './public/bower',
@@ -40,6 +44,30 @@ gulp.task('sass', function() {
             }
         }))
         .pipe(gulp.dest(dirs.css));
+});
+
+gulp.task('jshint', function() {
+    gulp.src(files.js)
+        .pipe(jshint())
+        .pipe(notify(function(file) {
+            if (file.jshint.success) {
+                return false;
+            }
+            var errors = file.jshint.results.map(function(data) {
+                if (data.error) {
+                    return '(' + data.error.line + ':' + data.error.character + ') ' + data.error.reason;
+                }
+            }).join('\n');
+            return file.relative + ' (' + file.jshint.results.length + ' error' + (file.jshint.results.length !== 1 ? 's' : '') + ')\n' + errors;
+        }))
+        .pipe(jshint.reporter('jshint-stylish'));
+
+});
+
+gulp.task('js', ['jshint'], function() {
+    gulp.src(files.js)
+        .pipe(gif(!devMode, uglify))
+        .pipe(gulp.dest(dirs.js));
 });
 
 gulp.task('bower', function() {
@@ -71,7 +99,7 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('build', ['clean', 'bower', 'sass']);
+gulp.task('build', ['clean', 'bower', 'sass', 'js']);
 
 gulp.task('default', ['build', 'watch'], function() {
     console.timeEnd('\033[32mGulp init time\033[0m');
