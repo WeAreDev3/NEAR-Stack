@@ -6,7 +6,7 @@ module.exports = function(app) {
         res.render('index', {
             title: 'Home',
             assets: {
-                js: ['angular.js', 'angular-route.js'],
+                js: ['angular.js', 'angular-route.js', 'main.js'],
                 css: ['normalize.css', 'main.css']
             }
         });
