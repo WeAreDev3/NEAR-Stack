@@ -39,7 +39,7 @@ app.use(express.static(path.join(config.root, 'public')));
 app.use(express.static(path.join(config.root, 'public/bower')));
 app.use(express.static(path.join(config.root, 'public/css')));
 app.use(express.static(path.join(config.root, 'public/js')));
-app.use(express.static(path.join(config.root, 'public/ng-views')));
+app.use(express.static(path.join(config.root, 'public/partials')));
 
 // Path router
 require(path.join(config.root, 'server/routes'))(app);
