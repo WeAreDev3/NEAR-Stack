@@ -91,6 +91,7 @@ gulp.task('bower', function() {
 gulp.task('watch', function() {
     gulp.watch(files.bower, ['bower']);
     gulp.watch(files.sass, ['sass']);
+    gulp.watch(files.js, ['js']);
 
     nodemon({
         'script': 'server.js',
