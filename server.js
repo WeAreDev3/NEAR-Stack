@@ -1,3 +1,5 @@
+require('./admin/logger');
+
 var express = require('express'),
     app = express(),
     swig = require('swig'),

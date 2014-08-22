@@ -1,3 +1,5 @@
+require('./admin/logger');
+
 console.time('\033[32mGulp init time\033[0m');
 var config = require('./config'),
     devMode = config.env === 'development',
@@ -96,7 +98,7 @@ gulp.task('watch', function() {
     nodemon({
         'script': 'server.js',
         'ext': 'html js',
-        'ignore': ['server/*/', 'node_modules/', 'bower_components/']
+        'ignore': ['server/*/', 'admin/', 'node_modules/', 'bower_components/']
     });
 });
 

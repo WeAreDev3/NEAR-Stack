@@ -1,0 +1,58 @@
+#log {
+    padding: 7px;
+    color: #ddd;
+    background-color: #222;
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}
+.blink {
+    -webkit-animation: blinker steps(1) 1.25s infinite;
+    -moz-animation: blinker steps(1) 1.25s infinite;
+    animation: blinker steps(1) 1.25s infinite;
+}
+.strike {
+    text-decoration: line-through;
+}
+.underline.strike {
+    text-decoration: underline line-through;
+}
+@-webkit-keyframes blinker {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+@-moz-keyframes blinker {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+@keyframes blinker {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}

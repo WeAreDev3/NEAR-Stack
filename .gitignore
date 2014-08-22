@@ -9,6 +9,7 @@ bower_components/
 public/bower/
 public/css/
 public/js/
+admin/log.txt
 
 # Mac junk
 .DS_Store
