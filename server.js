@@ -35,6 +35,7 @@ app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(config.root, 'server/views'));
 
+// Public files
 app.use(express.static(path.join(config.root, 'public')));
 app.use(express.static(path.join(config.root, 'public/bower')));
 app.use(express.static(path.join(config.root, 'public/css')));
