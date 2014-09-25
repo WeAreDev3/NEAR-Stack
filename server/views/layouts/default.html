@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="mySite">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Node Express Angular RethinkDB server">
 
-        <title>{{ title }} | {{ appName }}</title>
+        <title>{{ title }} | {= appName =}</title>
 
         {% for url in assets.css %}
             <link rel="stylesheet" href="{{ url }}">
@@ -14,17 +14,17 @@
         {% block headEnd %}{% endblock %}
     </head>
     <body>
-        {% block body %}
-            <div class="container">
-                {% block content %}{% endblock %}
-            </div>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
 
-            {% include 'footer.html' %}
-        {% endblock %}
+        {% include 'footer.html' %}
 
         {% for url in assets.js %}
             <script src="{{ url }}"></script>
         {% endfor %}
+            <script src="framework.js"></script>
+            <script>DataController.update(JSON.parse(unescape(("{= data =}"))));</script>
         {% block bodyEnd %}{% endblock %}
     </body>
 </html>

@@ -1,6 +1,8 @@
 {% extends 'layouts/default.html' %}
 
 {% block content %}
-    <h1>{{ appName }}</h1>
+    <h1>{= appName =}</h1>
+    <p>{{ testVar }}</p>
     <p>This is the "hello world" project.</p>
+    <a href="/error">Error</a>
 {% endblock %}

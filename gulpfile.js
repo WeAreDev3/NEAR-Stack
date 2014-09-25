@@ -12,6 +12,7 @@ var config = require('./config'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglifyjs'),
     clean = require('gulp-clean'),
+    concat = require('gulp-concat'),
     nodemon = require('gulp-nodemon'),
     notify = require('gulp-notify'),
     bower = require('bower'),
@@ -47,7 +48,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('jshint', function() {
-    gulp.src(files.js)
+    gulp.src([files.js, './framework/*.js'])
         .pipe(jshint())
         .pipe(notify(function(file) {
             if (file.jshint.success) {
@@ -67,6 +68,12 @@ gulp.task('jshint', function() {
 gulp.task('js', ['jshint'], function() {
     gulp.src(files.js)
         .pipe(gif(!devMode, uglify))
+        .pipe(gulp.dest(dirs.js));
+});
+
+gulp.task('framework', ['jshint'], function () {
+    gulp.src('./framework/*.js')
+        .pipe(concat('framework.js'))
         .pipe(gulp.dest(dirs.js));
 });
 
@@ -92,16 +99,19 @@ gulp.task('watch', function() {
     gulp.watch(files.bower, ['bower']);
     gulp.watch(files.sass, ['sass']);
     gulp.watch(files.js, ['js']);
+    gulp.watch('./framework/*.js', ['framework']);
 
     nodemon({
         'script': 'server.js',
-        'ext': 'html js',
+        'ext': 'html js json',
         'ignore': ['server/*/', 'node_modules/', 'bower_components/']
     });
 });
 
-gulp.task('build', ['clean', 'bower', 'sass', 'js']);
+gulp.task('build', ['bower', 'sass', 'js']);
 
 gulp.task('default', ['build', 'watch'], function() {
     console.timeEnd('\033[32mGulp init time\033[0m');
 });
+
+gulp.task('dev', ['framework', 'default']);

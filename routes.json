@@ -1,0 +1,14 @@
+{
+    "/": {
+        "view": "index",
+        "data": {
+            "title": "Home",
+            "assets": {
+                "js": ["main.js"],
+                "css": ["normalize.css", "main.css"]
+            },
+            "appName": "NEAR Stack",
+            "testVar": "A placeholder value"
+        }
+    }
+}
