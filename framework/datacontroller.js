@@ -28,7 +28,7 @@ var DataController = (function () {
     });
 
     function parseData (raw) {
-        return raw.replace(/{{.*}}/, function (key) {
+        return raw.replace(/{{.*}}/g, function (key) {
             var val = data[key.slice(2, -2).trim()][0];
             if (!val) throw new Error(val + ' is not a known variable');
             return val;
