@@ -24,7 +24,7 @@
             <script src="{{ url }}"></script>
         {% endfor %}
             <script src="framework.js"></script>
-            <script>DataController.update(JSON.parse(unescape(("{= data =}"))));</script>
+            <script>DataController.update(JSON.parse({% autoescape false %}{= data|json =}{% endautoescape %}));</script>
         {% block bodyEnd %}{% endblock %}
     </body>
 </html>

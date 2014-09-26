@@ -53,7 +53,7 @@ for (var route in routes) {
 function bindRoute (route) {
     var page = routes[route];
     app.route(route).get(function (req, res) {
-        res.render(page.view, {data: escape(JSON.stringify(page.data))});
+        res.render(page.view, {data: JSON.stringify(page.data)});
     });
     console.log(path.normalize(route + '/update'))
     app.route(path.normalize(route + '/update')).get(function (req, res) {
